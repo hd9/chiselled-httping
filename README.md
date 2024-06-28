@@ -1,14 +1,14 @@
 # chiselled-httping
-Run a chiselled httping as an Ubuntu ROCK
+Run a chiselled httping as an [Ubuntu ROCK](https://ubuntu.com/server/docs/about-rock-images)
 
 ## Getting Started
 For more informatio on how to build your chiselled containers, please read [Rockcraft's documentation](https://documentation.ubuntu.com/rockcraft/en/latest/).
-
+n
 ## Requirements
 For this tutorial, make sure you have the following tools installed (we're assuming you're using Ubuntu as your OS):
-- [rockcraft](https://snapcraft.io/rockcraft)
-- [chisel](https://snapcraft.io/chisel)
-- [docker](https://snapcraft.io/docker)
+- [Rockcraft](https://snapcraft.io/rockcraft)
+- [Chisel](https://snapcraft.io/chisel)
+- [Docker](https://snapcraft.io/docker)
 
 ## About Chiselled Containers
 [Chiselled containers](https://github.com/canonical/chisel/) are lightweight and secure OCI-compliant containers, built on top of Ubuntu. This means that they are Docker/K8s compatible and great for running production workloads due to its reduced size and enhanced security.
@@ -29,7 +29,7 @@ And pack your rock:
 
 As we can see below, once chiselled, our Ubuntu container is only 9.7MB in size!
 ```
-bruno@X1:~/src/chiselled-httping_2$ ls -lah *.rock
+bruno@X1:~/src/chiselled-httping$ ls -lah *.rock
 -rw-r--r-- 1 bruno bruno 9.7M Jun 28 12:48 httping_latest_amd64.rock
 ```
 

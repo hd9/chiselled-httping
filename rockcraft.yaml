@@ -1,0 +1,22 @@
+name: httping
+base: bare
+build-base: ubuntu@22.04
+version: 'latest'
+summary: ping-like program for http-requests
+description: |
+  httping is like ping for HTTP. It sends requests to a hostname or a remote
+  URL and it shows you how long it takes to connect, send a HTTP request and
+  retrieve the reply (only the header).
+  .
+  It supports SSL as well as various different ways to use it.
+license: Apache-2.0
+platforms:
+    amd64:
+run-user: _daemon_  # run as non-root user
+parts:
+  build-context:
+    plugin: nil
+    source: chisel-releases/
+    source-type: local
+    override-build:
+      chisel cut --release ./ --root ${CRAFT_PART_INSTALL} httping_bins

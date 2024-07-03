@@ -1,4 +1,0 @@
-[submodule "chisel-releases"]
-	path = chisel-releases
-	url = https://github.com/canonical/chisel-releases
-	branch = ubuntu-22.04

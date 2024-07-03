@@ -1,6 +1,6 @@
 name: httping
 base: bare
-build-base: ubuntu@22.04
+build-base: ubuntu@24.04
 version: 'latest'
 summary: ping-like program for http-requests
 description: |

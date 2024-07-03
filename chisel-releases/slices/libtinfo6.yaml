@@ -8,8 +8,8 @@ slices:
     essential:
       - libc6_libs
     contents:
-      /lib/*-linux-*/libtinfo.so.6*:
       /usr/lib/*-linux-*/libtic.so.6*:
+      /usr/lib/*-linux-*/libtinfo.so.6*:
 
   copyright:
     contents:

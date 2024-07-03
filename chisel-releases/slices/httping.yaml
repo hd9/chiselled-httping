@@ -6,10 +6,11 @@ essential:
 slices:
   bins:
     essential:
+      - base-files_lib
       - libc6_libs
       - libfftw3-double3_libs
       - libncursesw6_libs
-      - libssl3_libs
+      - libssl3t64_libs
       - libtinfo6_libs
       - openssl_bins
     contents:

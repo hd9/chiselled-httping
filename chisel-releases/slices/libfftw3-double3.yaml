@@ -7,7 +7,6 @@ slices:
   libs:
     essential:
       - libc6_libs
-      - libc6_config
       - libgomp1_libs
     contents:
       /usr/lib/*-linux-gnu/libfftw3*:

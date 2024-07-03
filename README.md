@@ -17,7 +17,7 @@ The [supported versions](https://documentation.ubuntu.com/rockcraft/en/latest/re
 
 For minimal size, you should use the `bare` base (as shown on this example), which brings only the essential components to your container. In our example, our container is only 9.7MB in size!
 
-## Building our chiselled container
+## Build our chiselled container
 To build this container, you'll need to pull the `ubuntu-22.04` chisel database with:
 $ git clone -b ubuntu-22.04 https://github.com/canonical/chisel-releases
 
@@ -33,9 +33,12 @@ bruno@X1:~/src/chiselled-httping_2$ ls -lah *.rock
 -rw-r--r-- 1 bruno bruno 9.7M Jun 28 12:48 httping_latest_amd64.rock
 ```
 
+## Push our container to Docker
 Now push your rock to your local Docker registry:
-`rockcraft.skopeo --insecure-policy copy oci-archive:httping_latest_amd64.rock docker-daemon:httping:latest`
+`$ rockcraft.skopeo --insecure-policy copy oci-archive:httping_latest_amd64.rock docker-daemon:httping:latest`
 
+
+## Run the container
 And finally, run your container with:
 `$ docker run --rm httping:latest exec httping -c 3 google.com`
 

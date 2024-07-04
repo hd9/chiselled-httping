@@ -40,17 +40,14 @@ bruno@X1:~/src/chiselled-httping$ ls -lah *.rock
 To build this rock (chiselled container), start by pulling this repo,
 checking out one of the following branches
 [ubuntu-22.04](https://github.com/hd9/chiselled-httping/tree/ubuntu-22.04) or
-[ubuntu-24.04](https://github.com/hd9/chiselled-httping/tree/ubuntu-24.04):\
-`$ git clone -b ubuntu-22.04 https://github.com/canonical/chisel-releases`
+[ubuntu-24.04](https://github.com/hd9/chiselled-httping/tree/ubuntu-24.04):
 
-Next, pack your rock with:\
-`$ rockcraft pack`
 
-Now push your container to your local Docker registry:\
-`$ rockcraft.skopeo --insecure-policy copy oci-archive:httping_latest_amd64.rock docker-daemon:httping:latest`
-
-And finally, run your container with:\
-`$ docker run --rm httping:latest exec httping -c 3 google.com`
+```bash
+git clone -b ubuntu-22.04 https://github.com/hd9/chiselled-httping
+cd chiselled-httping
+./run.sh
+```
 
 
 ## Next steps
